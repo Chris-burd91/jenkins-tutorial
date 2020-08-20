@@ -8,7 +8,8 @@ pipeline{
             }
             stage('Install docker & docker compose'){
                 steps{
-                    sh "curl https://get.docker.com | sudo bash && . ./docker-compose-install.sh"
+                    sh "curl https://get.docker.com | sudo bash"
+		    sh ". ./docker-compose-install.sh"
                 }
             }
             stage('Deploy application'){
