@@ -8,7 +8,7 @@ pipeline{
             }
             stage('Install docker & docker compose'){
                 steps{
-		    sh "./scripts/docker-installs"
+		    sh "./scripts/docker-installs.sh"
                 }
             }
             stage('Deploy application'){
